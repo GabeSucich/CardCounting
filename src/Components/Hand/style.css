@@ -1,0 +1,9 @@
+.card-in-hand {
+    margin-left: -4vw !important;
+}
+
+.hand {
+    display: inline-flex !important;
+    white-space: nowrap !important;
+    margin-right: 10px !important;
+}

@@ -1,0 +1,6 @@
+.questions {
+    position: fixed !important;
+    top: 40vh !important;
+    left: 20vw !important;
+    width: 60vw !important;
+}

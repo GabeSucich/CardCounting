@@ -1,0 +1,12 @@
+.playing-card {
+    min-width: 50px !important;
+    width: 7vw !important;
+    height: auto !important;
+    display: inline-flex !important;
+    margin-right: -10px !important;
+}
+
+.fitted {
+    width: 200px !important;
+}
+
