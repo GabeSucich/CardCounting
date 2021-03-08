@@ -1,0 +1,22 @@
+.corner-menu{
+    position: fixed !important;
+    top: 5px !important;
+    left: 5px !important;
+    z-index: 2 !important;
+}
+
+.close-button {
+    position: absolute !important;
+    top: 5px !important;
+    right: 5px !important;
+}
+
+.collapsed-menu-item {
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+}
+
+.menu-emphasis {
+    font-weight: 900 !important;
+    color: green !important;
+}

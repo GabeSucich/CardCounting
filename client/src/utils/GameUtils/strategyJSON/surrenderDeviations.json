@@ -1,0 +1,46 @@
+{
+    "s17": {
+        "14,10": {
+            "index": 3,
+            "higher": "SURR",
+            "lower": "H"
+        },
+        "15,10": {
+            "index": 0,
+            "higher": "SURR",
+            "lower": "H"
+        },
+        "15,9": {
+            "index": 2,
+            "higher": "SURR",
+            "lower": "H"
+        },
+        "15,A": {
+            "index": 2,
+            "higher": "SURR",
+            "lower": "H"
+        }
+    },
+    "h17": {
+        "14,10": {
+            "index": 3,
+            "higher": "SURR",
+            "lower": "H"
+        },
+        "15,10": {
+            "index": 0,
+            "higher": "SURR",
+            "lower": "H"
+        },
+        "15,9": {
+            "index": 2,
+            "higher": "SURR",
+            "lower": "H"
+        },
+        "15,A": {
+            "index": -1,
+            "higher": "SURR",
+            "lower": "H"
+        }
+    }
+}

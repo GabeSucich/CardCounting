@@ -1,0 +1,14 @@
+
+
+.player1double {
+    position: fixed !important;
+    left: 60% !important;
+    bottom: 0 !important
+}
+
+
+.player2double {
+    position: fixed !important;
+    left: 15% !important;
+    bottom: 0 !important;
+}

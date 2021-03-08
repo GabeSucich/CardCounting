@@ -1,0 +1,50 @@
+.background {
+    background-image: url("tableBackground.jpeg");
+    background-size: cover;
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+.overflow {
+    overflow: auto !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.full-size {
+    height: 100% !important;
+    width:  100% !important;
+}
+
+.full-height {
+    height: 100vh !important;
+}
+
+.card-container {
+    width: 50vw !important;
+    overflow: visible !important;
+}
+
+.dealer {
+    position: fixed !important;
+    left: 40% !important;
+    top: 5% !important; 
+}
+
+.sunrise {
+    font-family: 'Waiting for the Sunrise', cursive !important;
+}
+
+.white {
+    color: white !important;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }

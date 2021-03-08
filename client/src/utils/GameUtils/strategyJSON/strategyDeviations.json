@@ -1,0 +1,166 @@
+{
+    "h17": {
+        "16,9": {
+            "index": 5,
+            "higher": "S",
+            "lower": "H"
+        },
+        "16,10": {
+            "index": 0,
+            "higher": "S",
+            "lower": "H"
+        },
+        "15,10": {
+            "index": 4,
+            "higher": "S",
+            "lower": "H"
+        },
+        "13,2": {
+            "index": -1,
+            "higher": "S",
+            "lower": "H"
+        },
+        "12,2": {
+            "index": 4,
+            "higher": "S",
+            "lower": "H"
+        },
+        "12,3": {
+            "index": 2,
+            "higher": "S",
+            "lower": "H"
+        },
+        "12,4": {
+            "index": 0,
+            "higher": "S",
+            "lower": "H"
+        },
+        "12,5": {
+            "index": -1,
+            "higher": "S",
+            "lower": "H"
+        },
+        "12,6": {
+            "index": -3,
+            "higher": "S",
+            "lower": "H"
+        },
+        "11,A": {
+            "index": -1,
+            "higher": "D",
+            "lower": "H"
+        },
+        "10,10": {
+            "index": 4,
+            "higher": "D",
+            "lower": "H"
+        },
+        "10,A": {
+            "index": 3,
+            "higher": "D",
+            "lower": "H"
+        },
+        "9,2": {
+            "index": 1,
+            "higher": "D",
+            "lower": "H"
+        },
+        "9,7": {
+            "index": 4,
+            "higher": "D",
+            "lower": "H"
+        },
+        "1010,5": {
+            "index": 5,
+            "higher": "SP",
+            "lower": "S"
+        },
+        "1010,6": {
+            "index": 5,
+            "higher": "SP",
+            "lower": "S"
+        }
+    },
+    "s17": {
+        "16,9": {
+            "index": 5,
+            "higher": "S",
+            "lower": "H"
+        },
+        "16,10": {
+            "index": 0,
+            "higher": "S",
+            "lower": "H"
+        },
+        "15,10": {
+            "index": 4,
+            "higher": "S",
+            "lower": "H"
+        },
+        "13,2": {
+            "index": -1,
+            "higher": "S",
+            "lower": "H"
+        },
+        "12,2": {
+            "index": 4,
+            "higher": "S",
+            "lower": "H"
+        },
+        "12,3": {
+            "index": 2,
+            "higher": "S",
+            "lower": "H"
+        },
+        "12,4": {
+            "index": 0,
+            "higher": "S",
+            "lower": "H"
+        },
+        "12,5": {
+            "index": -1,
+            "higher": "S",
+            "lower": "H"
+        },
+        "12,6": {
+            "index": -1,
+            "higher": "S",
+            "lower": "H"
+        },
+        "11,A": {
+            "index": 1,
+            "higher": "D",
+            "lower": "H"
+        },
+        "10,10": {
+            "index": 4,
+            "higher": "D",
+            "lower": "H"
+        },
+        "10,A": {
+            "index": 4,
+            "higher": "D",
+            "lower": "H"
+        },
+        "9,2": {
+            "index": 1,
+            "higher": "D",
+            "lower": "H"
+        },
+        "9,7": {
+            "index": 4,
+            "higher": "D",
+            "lower": "H"
+        },
+        "1010,5": {
+            "index": 5,
+            "higher": "SP",
+            "lower": "S"
+        },
+        "1010,6": {
+            "index": 5,
+            "higher": "SP",
+            "lower": "S"
+        }
+    }
+}
