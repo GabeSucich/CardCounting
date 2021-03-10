@@ -19,13 +19,13 @@ export default function StrategyConsiderations({ useIndeces, setIndeces, countWi
                 </Form.Field>
                 <Form.Field>
                     <Radio
-                        label='Basic Strategy and Index Values'
+                        label='Basic Strategy and Playing Deviations'
                         checked={useIndeces}
                         onChange={() => setIndeces(true)}
                     />
                 </Form.Field>
             </Form>
-            <Link to="/test">Learn more about index values</Link>
+            <Link to="/test">Learn more about playing deviations and index values</Link>
             <Divider />
             {useIndeces &&
                 <Checkbox

@@ -12,6 +12,8 @@ import UserAPI from "../utils/APIs/UserAPI"
 import Navigation from "../Navigation"
 import Game from "../Game"
 import Introduction from "../Introduction"
+import TrainingGuide from "../TrainingGuide"
+import OverallStats from "../StatDisplays/Overall"
 
 export default function AuthenticateUser() {
 
@@ -35,25 +37,30 @@ export default function AuthenticateUser() {
 
     if (userState.user) {
         return (
-            <GameProvider>
-                <QuestionProvider>
-                    <Navigation />
-                    <div className="background overflow">
-                        <Switch>
-                            <Route path="/train">
-                                <Game numDecks={4} numPlayers={2} />
-                            </Route>
-                            <Route path="/intro">
-                                <Introduction />
-                            </Route>
-                            <Route>
-                                <Redirect to="/train" />
-                            </Route>
-                        </Switch>
 
-                    </div>
-                </QuestionProvider>
-            </GameProvider>
+            <QuestionProvider>
+                <Navigation />
+                <div className="background overflow">
+                    <Switch>
+                        <Route path="/train">
+                            <Game numDecks={4} numPlayers={2} />
+                        </Route>
+                        <Route path="/intro">
+                            <Introduction />
+                        </Route>
+                        <Route path="/guide">
+                            <TrainingGuide />
+                        </Route>
+                        <Route path="/stats">
+                            <OverallStats />
+                        </Route>
+                        <Route>
+                            <Redirect to="/train" />
+                        </Route>
+                    </Switch>
+
+                </div>
+            </QuestionProvider>
 
         )
     } else {

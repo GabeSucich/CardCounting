@@ -23,7 +23,7 @@ export default function Navigation({ ...props }) {
                 as={Link}
                 to="/intro"
                 active={activePage === "intro"}
-                name="Introduction"
+                name="About Card Counting"
                 onClick={() => setActivePage("intro")}
             />
             <Menu.Item

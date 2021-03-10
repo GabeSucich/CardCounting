@@ -1,0 +1,12 @@
+.decision-header {
+    margin-bottom: 2px !important;
+}
+
+.decision-stat {
+    margin-top: 2px !important;
+}
+
+.decision-column {
+    display: flex !important;
+}
+

@@ -1,0 +1,13 @@
+.stat {
+    margin: 10px !important
+}
+
+.stat-label {
+    display: inline-block !important;
+    margin: 10px !important
+}
+
+.stat-button {
+    padding: 10px !important;
+    display: inline-block !important;
+}

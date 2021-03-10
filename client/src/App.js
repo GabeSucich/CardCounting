@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 import "./ApplicationStyle.css"
 
 import { UserProvider } from "./AuthenticateUser/UserState"
+import { GameProvider } from "./Game/GlobalStates/GameState"
 
 import AuthenticateUser from "./AuthenticateUser"
 
@@ -17,7 +18,9 @@ function App() {
   return (
     <Router>
       <UserProvider>
-        <AuthenticateUser/>
+        <GameProvider>
+          <AuthenticateUser/>
+        </GameProvider>
       </UserProvider>
     </Router>
   );

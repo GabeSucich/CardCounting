@@ -6,10 +6,10 @@ import PlayingCard from "../PlayingCard"
 
 import "./style.css"
 
-export default function Hand({ hand, active, ...props }) {
+export default function Hand({ hand, active, centered, ...props }) {
     
     return (
-        <Segment basic disabled = {hand.isDone() ? true : false} className = "hand">
+        <Segment basic disabled = {hand.isDone() ? true : false} className = {active ? "hand active" : "hand"}  textAlign= {centered ? "center" : "left"}>
             <Image.Group>
                 {hand.cards.map((card, index) => {
                 return (

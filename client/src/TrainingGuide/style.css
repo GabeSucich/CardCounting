@@ -1,0 +1,16 @@
+.full-image {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.page-fit {
+    height: 85vh !important;
+}
+
+.menu-overflow {
+    overflow-x: auto!important;
+    overflow-y: hidden !important;
+    scrollbar-width: thin;
+}
+
+

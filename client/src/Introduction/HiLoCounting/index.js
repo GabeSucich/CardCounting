@@ -62,7 +62,7 @@ export default function HiLoCounting({ getUrl, ...props }) {
                     <Divider/>
                     <Grid>
                         <Grid.Column width = {16} textAlign="center">
-                            <Header as = "h2" className = "sunrise" style={{ marginBottom: "0px" }}>The True Count</Header>
+                            <Header as = "h2" className = "sunrise section-header">The True Count</Header>
                             <Segment basic style={{ marginTop: "0px" }}>
                                 A running count of +6 when there are 6 decks left in the shoe means something different from when there
                                 are only 3 decks remaining. A player is twice as likely to get a high card in the latter scenario. This is why

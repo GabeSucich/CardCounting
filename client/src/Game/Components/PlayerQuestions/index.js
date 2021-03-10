@@ -19,15 +19,17 @@ export default function PlayerQuestions({ afterEvent, updateHands, activeHand, .
     const [ready, setReady] = useState(false)
 
     const chooseQuestions = () => {
+        const questions = {}
         if (Math.random() < questionState.askRunningCount) {
-            setQuestionsToAsk({ ...questionsToAsk, runningCount: true })
+            questions.runningCount = true;
         }
         if (Math.random() < questionState.askDecksRemaining) {
-            setQuestionsToAsk({ ...questionsToAsk, decksRemaining: true })
+            questions.decksRemaining = true
         }
         if (Math.random() < questionState.askTrueCount) {
-            setQuestionsToAsk({ ...questionsToAsk, trueCount: true })
+            questions.trueCount = true;
         }
+        setQuestionsToAsk(questions)
 
     }
 
@@ -59,6 +61,7 @@ export default function PlayerQuestions({ afterEvent, updateHands, activeHand, .
         })
 
     }, [])
+
 
     if (!questionState.playerIsActive || !ready) {
         return null

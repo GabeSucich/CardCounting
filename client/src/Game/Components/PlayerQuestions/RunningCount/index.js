@@ -50,7 +50,7 @@ export default function RunningCount({ runningCount, questionsToAsk, setQuestion
                 type="text"
                 value={answer}
                 onChange={e => setAnswer(e.target.value)}
-                label={<Button icon color="green" onClick={onSubmit}><Icon name="check" ></Icon></Button>}
+                label={<Button disabled = {answer ? false : true} icon color={answer ? "green" : "grey"} onClick={onSubmit}><Icon name="check" ></Icon></Button>}
                 labelPosition="right"
             />
             {badInputType && <Message negative>{"You must enter a number for the running count"}</Message>}

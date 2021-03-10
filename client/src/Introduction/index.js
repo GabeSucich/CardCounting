@@ -20,28 +20,27 @@ export default function Introduction({ ...props }) {
     let match = useRouteMatch()
     let loc = useLocation()
 
+    const pagePaths = ["/forward", "/strategy", "/hilo", "/betting", "/playing"]
+    const pageNames = ["Forward", "Basic Strategy", "Hi-Lo Card Counting", "Betting Deviations", "Playing Deviations"]
+    const PageComponents = [Forward, BasicStrategy, HiLoCounting, BettingDeviations, PlayingDeviations]
+
     const getUrl = path => {
         return match.url + path
     }
 
-    
 
-    console.log(getUrl("hilo"))
 
     useEffect(() => {
 
-        if (loc.pathname.includes("strategy")) {
-            setActivePage("strategy")
-        } else if (loc.pathname.includes("hilo")) {
-            console.log("hilo")
-            setActivePage("hilo")
-        } else if (loc.pathname.includes("betting")) {
-            setActivePage("betting")
-        } else if (loc.pathname.includes("playing")) {
-            setActivePage("playing")
+        var foundPage = false
+        for (const path of pagePaths) {
+            if (loc.pathname.includes(path)) {
+                foundPage = true;
+                setActivePage(path)
+            }
         }
-        else {
-            setActivePage("forward")
+        if (!foundPage) {
+            setActivePage(pagePaths[0])
         }
 
     }, [loc])
@@ -50,76 +49,37 @@ export default function Introduction({ ...props }) {
 
         <Container style={{ marginTop: "5px", paddingTop: "5px" }}>
             <Menu tabular attached="top" className="menu-overflow">
-                <Menu.Item
-                    as={Link}
-                    to={getUrl("")}
-                    name="Forward"
-                    active={activePage === "forward"}
-                    onClick={() => setActivePage("forward")}
-                    className={activePage === "forward" ? "" : "white"}
-                />
-                <Menu.Item
-                    as={Link}
-                    to={getUrl("/strategy")}
-                    name="Basic Strategy"
-                    active={activePage === "strategy"}
-                    onClick={() => setActivePage("strategy")}
-                    className={activePage === "strategy" ? "" : "white"}
-                />
-                <Menu.Item
-                    as={Link}
-                    to={getUrl("/hilo")}
-                    name="Hi-Lo Card Counting"
-                    active={activePage === "hilo"}
-                    onClick={() => setActivePage("hilo")}
-                    className={activePage === "hilo" ? "" : "white"}
-                />
-                <Menu.Item
-                    as={Link}
-                    to={getUrl("/betting")}
-                    name="Betting Deviations"
-                    active={activePage === "betting"}
-                    onClick={() => setActivePage("betting")}
-                    className={activePage === "betting" ? "" : "white"}
-                />
-                <Menu.Item
-                    as={Link}
-                    to={getUrl("/playing")}
-                    name="Playing Deviations"
-                    active={activePage === "playing"}
-                    onClick={() => setActivePage("playing")}
-                    className={activePage === "playing" ? "" : "white"}
-                />
+                {pagePaths.map((path, index) => {
+                    return (
+                        <Menu.Item 
+                            as = {Link}
+                            to = {getUrl(path)}
+                            name = {pageNames[index]}
+                            active = {activePage === path}
+                            onClick = {() => setActivePage(path)}
+                            className = {activePage === path ? "" : "white"}
+                        />
+                    )
+                })}
 
             </Menu>
 
             <Switch>
 
-                <Route path={getUrl("/strategy")}>
-                    <BasicStrategy getUrl={getUrl} />
-                </Route>
-                <Route path={getUrl("/hilo")}>
-                    <HiLoCounting getUrl={getUrl}/>
-                </Route>
-                <Route path = {getUrl("/betting")}>
-                    <BettingDeviations getUrl = {getUrl}/>
-                </Route>
-                <Route path = {getUrl("/playing")}>
-                    <PlayingDeviations getUrl = {getUrl}/>
-                </Route>
+                {pagePaths.map((path, index) => {
+                    const PageComponent = PageComponents[index]
+                    return (
+                        <Route path = {getUrl(path)}>
+                            <PageComponent getUrl = {getUrl} />
+                        </Route>
+                    )
+                })}
 
-                <Route path = {getUrl("/forward")}>
-                    <Forward getUrl={getUrl} />
-                </Route>
                 <Route>
-                    <Redirect to = {getUrl("/forward")}/>
+                    <Redirect to = {getUrl("/forward")} />
                 </Route>
+
             </Switch>
-
-
-
-
-
         </Container>
     )
 

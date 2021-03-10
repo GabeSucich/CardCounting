@@ -70,8 +70,8 @@ export default function TrueCount({ trueCount, totalDecks, questionsToAsk, setQu
                 type="text"
                 value={answer}
                 onChange={e => setAnswer(e.target.value)}
-                label={answer ? <Button icon color="green" onClick={checkAnswer}><Icon name="check" ></Icon></Button> : false}
-                // labelPosition={answer ? "right" : false}
+                label={ <Button disabled = {answer ? false : true} icon color={answer ? "green" : "grey"} onClick={checkAnswer}><Icon name="check" ></Icon></Button>}
+                labelPosition="right"
             />
             {badInputType && <Message negative>{"You must enter a number for the true count."}</Message>}
             {correct && <Message success>{`Yep, ${answer} is a good estimate of the true count!`}</Message>}

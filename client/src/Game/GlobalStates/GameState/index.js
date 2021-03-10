@@ -26,9 +26,9 @@ const reducer = (state, action) => {
     switch (action.type) {
         case SET_GAME:
             var game = action.game
-            // var history = action.game.getHistory()
-            // var remaining_history = [...history.slice(1)]
-            // var current_play = {...history[0]}
+            var history = action.game.getHistory()
+            var remaining_history = [...history.slice(1)]
+            var current_play = {...history[0]}
             return {...state, game: game, remaining_history: remaining_history, current_play: current_play}
             break
         case SET_HISTORY:
@@ -68,6 +68,7 @@ const reducer = (state, action) => {
             var history = game.getHistory()
             var remaining_history = [...history.slice(1)]
             var current_play = {...history[0]}
+            console.log(current_play)
             return {...state, game: game, remaining_history: remaining_history, current_play: current_play, prev_play: null, player_turn: false, player_state: [], finished: false}
         case FINISH_GAME:
             return {...state, finished: true}

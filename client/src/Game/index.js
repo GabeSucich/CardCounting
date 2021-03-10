@@ -19,12 +19,12 @@ export default function Game({ numPlayers, numDecks,  ...props }) {
     useEffect(() => {
 
         // Temporary for stat page development
-        GameAPI.getAllGameStats().then(stats => {
-            console.log(stats)
-            gameDispatch({type: SET_GAME, game: stats[23].game})
-            setTempStats(stats[23])
-            gameDispatch({type: FINISH_GAME})
-        })
+        // GameAPI.getAllGameStats().then(stats => {
+        //     console.log(stats)
+        //     gameDispatch({type: SET_GAME, game: stats[23].game})
+        //     setTempStats(stats[23])
+        //     gameDispatch({type: FINISH_GAME})
+        // })
 
         return () => {
             gameDispatch({type: CLEAR_GAME})
@@ -51,12 +51,12 @@ export default function Game({ numPlayers, numDecks,  ...props }) {
 
      else if (gameState.game) {
         return (
-            <div></div>
-            // <TableArrangement afterEvent = {nextMove}/>    
+            // <div></div>
+            <TableArrangement afterEvent = {nextMove}/>    
         )
     }
     else {
-        return <div></div>
-        // return <GameSetup/>
+        // return <div></div>
+        return <GameSetup/>
     }
 }

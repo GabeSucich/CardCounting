@@ -56,7 +56,6 @@ export default function GameSetup({ ...props }) {
 
         if (countingCards) {
 
-            console.log("You are counting")
            questionDispatch({type: SET_FREQUENCIES, frequencies: frequency}) 
            gameDispatch({type: SET_DIFFICULTY, difficulty: difficulty})
            gameDispatch({type: SHOW_COUNT, countWithIndeces: countWithIndeces})
@@ -74,9 +73,7 @@ export default function GameSetup({ ...props }) {
         while (!game.getHistory().map(item => item.action).includes("split")) {
             game = new Game(numPlayers, numDecks, rules, considerIndices)
         }
-        console.log(game.getHistory().map(item => item.action).includes("split"))
         
-
         gameDispatch({type: SET_GAME, game: game})
 
         
@@ -118,8 +115,8 @@ export default function GameSetup({ ...props }) {
                 <SectionDivider separations={2} />
 
                 <Divider horizontal className="white"> Game Rules</Divider>
-                <Grid centered textAlign="center">
-                    <Grid.Column width={16} textAlign="center">
+                <Grid centered >
+                    <Grid.Column mobile = {10} tablet = {16} textAlign="center">
                         <Header as="h3" className="sunrise white">
                             Choose the game rules <InfoPopup content={"Different blackjack tables have different rules. The rules of the game will affect your best move during the game."} />
                         </Header>
