@@ -45,6 +45,7 @@ export default function DecksRemaining({ numDecks, checkDecksRemaining, question
         {getPossibleValues().map((value, index) => {
             return (
                 <Button
+                    style = {{marginBottom: "2px"}}
                     key = {index}
                     positive={selected && selected[1] === index && checkDecksRemaining(value)}
                     negative={selected && selected[1] === index && !checkDecksRemaining(value)}

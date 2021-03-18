@@ -31,7 +31,7 @@ export default function GameSetup({ ...props }) {
     const [gameState, gameDispatch] = useGameContext()
 
     const [numPlayers, setNumPlayers] = useState(1)
-    const [numDecks, setNumDecks] = useState(4)
+    const [numDecks, setNumDecks] = useState(6)
     const [rules, setRules] = useState({ canDAS: true, canSurrender: false, h17: true })
     const [useIndices, setIndices] = useState(false)
     const [countWithIndeces, setCountWithIndeces] = useState(true)
@@ -159,7 +159,7 @@ export default function GameSetup({ ...props }) {
             {countingCards ?
                 <Grid.Column computer = {5} tablet = {5} mobile = {16}  textAlign="center" className="overflow">
 
-                    <Divider horizontal className="white">Difficulty Settings</Divider>
+                    <Divider horizontal className="white">Card Counting Parameters</Divider>
 
                     <Grid className = "overflow right-column">
                         <Grid.Column width={16}>

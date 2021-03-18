@@ -1,7 +1,6 @@
 import React from "react"
 
-import { Link } from "react-router-dom"
-import { Segment, Grid, Header, Image} from "semantic-ui-react"
+import { Segment, Grid, Header, Image, Divider} from "semantic-ui-react"
 
 export default function PlayingDeviations({ getUrl, ...props }) {
 
@@ -27,29 +26,31 @@ export default function PlayingDeviations({ getUrl, ...props }) {
                 </Segment>
                 </Grid.Column>
                 
-                <Grid.Column computer={6} tablet={6} mobile={16} textAlign="center">
+                <Grid.Column computer={6} tablet={6} mobile={16} textAlign="center" verticalAlign="middle">
+                    
+                    <Segment inverted className="section-body" textAlign="center">
                     <Header as="h2" className="sunrise section-header">Illustrious 18</Header>
-                    <Segment basic className="section-body" textAlign="center">
                         The 18 most valuable deviations are dubbed the "illustrious 18".
                         <br/>
                         <b>Note: </b> "h17" at the bottom of the chart refers to the variation of blackjack where the dealer must hit on a soft 17.
                         This is in contrast to "s17", where the dealer stands on all 17s.
                     </Segment>
                 </Grid.Column>
-                <Grid.Column computer = {10} tablet = {10} mobile = {16}>
+                <Grid.Column computer = {10} tablet = {10} mobile = {16} verticalAlign="middle">
                     <Image src = "/images/introduction/illustrious18.png" fluid/>
                 </Grid.Column>
-                <Grid.Column computer={6} tablet={6} mobile={16} textAlign="center">
+                <Grid.Column computer={6} tablet={6} mobile={16} textAlign="center" verticalAlign="middle">
+                    
+                    <Segment inverted className="section-body" textAlign="center">
                     <Header as="h2" className="sunrise section-header">Fab 4</Header>
-                    <Segment basic className="section-body" textAlign="center">
                         The 4 most valuable deviations when regarding surrenders (when they are allowed).
                         <br/>
                         <b>Note: </b> "h17" at the bottom of the chart refers to the variation of blackjack where the dealer must hit on a soft 17.
                         This is in contrast to "s17", where the dealer stands on all 17s.
                     </Segment>
                 </Grid.Column>
-                <Grid.Column computer = {10} tablet = {10} mobile = {16}>
-                    <Image src = "/images/introduction/illustrious18.png" fluid/>
+                <Grid.Column computer = {10} tablet = {10} mobile = {16} verticalAlign="middle">
+                    <Image src = "/images/introduction/fab4.png" fluid/>
                 </Grid.Column>
                 
 

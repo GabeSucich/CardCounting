@@ -19,9 +19,9 @@ export default function Difficulty({ difficulty, setDifficulty, ...props }) {
 
     return (
         <Grid>
-            <SpeedChanger time={difficulty.player_action} setTime={setPlayerAction} header = {"each players' decisions?"}/>
-            <SpeedChanger time={difficulty.deal} setTime={setDeal} header = {"each dealt card?"}/>
-            <SpeedChanger time={difficulty.clear} setTime={setClear} header = {"players' hands are cleared"} />
+            <SpeedChanger time={difficulty.player_action} setTime={setPlayerAction} header = {"each CPU's decisions?"}/>
+            <SpeedChanger time={difficulty.deal} setTime={setDeal} header = {"each card is dealt?"}/>
+            <SpeedChanger time={difficulty.clear} setTime={setClear} header = {"each player's hand is cleared?"} />
 
         </Grid>
     )

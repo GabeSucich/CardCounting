@@ -1,3 +1,7 @@
+body {
+    font-family: 'K2D', sans-serif !important;
+}
+
 .background {
     background-image: url("tableBackground.jpeg");
     background-size: cover;
@@ -8,6 +12,7 @@
 .overflow {
     overflow: auto !important;
 }
+
 
 
 .no-padding {
@@ -49,3 +54,22 @@
 ::-webkit-scrollbar {
     display: none;
   }
+
+.show-on-small {
+    display: none !important
+}
+
+.hide-on_small {
+    display: initial !important;
+}
+
+@media only screen and (max-width: 600px) {
+    
+.show-on-small {
+      display: initial !important;
+    }
+
+.hide-on_small {
+    display: none !important;
+}
+}

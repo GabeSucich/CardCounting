@@ -4,7 +4,8 @@
 }
 
 .page-fit {
-    height: 85vh !important;
+    height: fit-content !important;
+    max-height: 85vh !important;
 }
 
 .menu-overflow {
@@ -13,4 +14,13 @@
     scrollbar-width: thin;
 }
 
+.no-top-padding {
+    padding-top: 0px !important
+}
+
+.toggle-button {
+    margin: 0px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
 

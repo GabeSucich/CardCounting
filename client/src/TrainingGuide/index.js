@@ -3,10 +3,9 @@ import { Route, Switch, Link, useRouteMatch, useLocation, Redirect } from "react
 
 import { Menu, Container, Button, Segment } from "semantic-ui-react"
 
-import Concept from "./Concept"
-import GameRules from "./GameRules"
+import GameParameters from "./GameParameters"
 import StrategyConsiderations from "./StrategyConsiderations"
-import DifficultySettings from "./DifficultySettings"
+import CardCountingParameters from "./CardCountingParameters"
 import MasteringCardCounting from "./MasteringCardCounting"
 
 import "./style.css"
@@ -14,9 +13,9 @@ import "./style.css"
 export default function TrainingGuide({ ...props }) {
 
     const [activePage, setActivePage] = useState("")
-    const pagePaths = ["/concept", "/rules", "/strategy", "/difficulty", "/counting"]
-    const pageNames = ["Concept", "Game Rules", "Strategy Considerations", "Difficulty", "Mastering Card Counting"]
-    const PageComponents = [Concept, GameRules, StrategyConsiderations, DifficultySettings, MasteringCardCounting]
+    const pagePaths = ["/parameters", "/strategy", "/countparameters", "/counting"]
+    const pageNames = ["Game Parameters", "Strategy Considerations", "Card Counting Parameters", "Mastering Card Counting"]
+    const PageComponents = [GameParameters, StrategyConsiderations, CardCountingParameters, MasteringCardCounting]
 
     let match = useRouteMatch()
     let loc = useLocation()
@@ -84,15 +83,15 @@ export default function TrainingGuide({ ...props }) {
                     {pagePaths.map((path, index) => {
                         const PageComponent = PageComponents[index]
                         return (
-                            <Route path={getUrl(path)}>
-                                <PageComponent />
+                            <Route path={getUrl(path)} key={index}>
+                                <PageComponent getUrl = {getUrl}/>
                             </Route>
                         )
 
                     })}
 
                     <Route>
-                        <Redirect to={getUrl("/concept")} />
+                        <Redirect to={getUrl(pagePaths[0])} />
                     </Route>
 
                 </Switch>

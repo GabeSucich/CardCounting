@@ -13,7 +13,11 @@ const UserAPI = {
         })
     },
 
-    checkPassword(username, password) {
+    checkPassword(passwordEntry, encryptedPassword) {
+        return bcrypt.compareSync(passwordEntry, encryptedPassword)
+    },
+
+    checkPasswordFromDatabase(username, password) {
         this.findUsername(username).then(dbUser => {
             return bcrypt.compareSync(password, dbUser.password)
         })

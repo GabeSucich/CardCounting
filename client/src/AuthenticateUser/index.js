@@ -21,6 +21,7 @@ export default function AuthenticateUser() {
 
     useEffect(() => {
         UserAPI.findUsername("testuser").then(dbUser => {
+            
             if (dbUser) {
                 UserAPI.loginUser("testuser").then(dbUser => {
                     userDispatch({ type: SET_USER, user: dbUser })

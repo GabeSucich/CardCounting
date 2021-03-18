@@ -58,6 +58,7 @@ export default function Introduction({ ...props }) {
                             active = {activePage === path}
                             onClick = {() => setActivePage(path)}
                             className = {activePage === path ? "" : "white"}
+                            key = {index}
                         />
                     )
                 })}
@@ -69,7 +70,7 @@ export default function Introduction({ ...props }) {
                 {pagePaths.map((path, index) => {
                     const PageComponent = PageComponents[index]
                     return (
-                        <Route path = {getUrl(path)}>
+                        <Route path = {getUrl(path)} key = {index}>
                             <PageComponent getUrl = {getUrl} />
                         </Route>
                     )

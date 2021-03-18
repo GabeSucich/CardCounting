@@ -41,7 +41,7 @@ export default function BettingDeviations({ getUrl, ...props }) {
                         </Header>
                         <Grid>
                             <Grid.Column computer={8} tablet={8} mobile={8}>
-                                <Segment textAlign="center" color="green" inverted>
+                                <Segment textAlign="center" inverted>
                                     <Header as="h3" className="sunrise">1. Statistics</Header>
                                 A high true count does not guarantee that the player will win the next hand. The edge of the player over the house with
                                 bet variation is a statistical inevitability over many many hands. If enough blackjack is played, it is also a statistical inevitability
@@ -49,7 +49,7 @@ export default function BettingDeviations({ getUrl, ...props }) {
                             </Segment>
                             </Grid.Column>
                             <Grid.Column computer={8} tablet={8} mobile={8}>
-                                <Segment textAlign="center" color="green" inverted>
+                                <Segment textAlign="center" inverted>
                                     <Header as="h3" className="sunrise">2. Unwanted Attention</Header>
                                     Card counters bet differently than normal players. Standard blackjack players tend to bet bigger after wins and smaller after losses.
                                     Card counting does not follow this pattern, and casinos know this. Though card counting is not illegal, casinos can ban suspected card counters.
