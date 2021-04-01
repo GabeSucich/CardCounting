@@ -6,7 +6,7 @@ body {
     background-image: url("tableBackground.jpeg");
     background-size: cover;
     width: 100vw !important;
-    height: 100vh !important;
+    height: 105vh !important;
 }
 
 .overflow {
@@ -23,6 +23,13 @@ body {
     margin: 0 !important;
 }
 
+.no-bottom-margin {
+    margin-bottom: 0 !important;
+}
+
+.no-top-margin {
+    margin-top: 0 !important;
+} 
 .full-size {
     height: 100% !important;
     width:  100% !important;

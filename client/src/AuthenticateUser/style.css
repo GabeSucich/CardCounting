@@ -1,0 +1,5 @@
+.loading-background {
+    height: 100vh !important;
+    width: 100vw !important;
+    background-color: rgba(84, 200, 144, 0.5)
+}

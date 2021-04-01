@@ -5,7 +5,7 @@ import {Button} from "semantic-ui-react"
 export default function PlayerCount({numPlayers, setNumPlayers, ...props}) {
 
     const handleIncrease = () => {
-        if (numPlayers < 5) {
+        if (numPlayers < 4) {
             setNumPlayers(numPlayers + 1)
         }
     }

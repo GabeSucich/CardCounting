@@ -1,0 +1,25 @@
+
+.player1quartet {
+    position: fixed !important;
+    left: 75% !important;
+    bottom: 25% !important
+}
+
+.player2quartet {
+    position: fixed !important;
+    left: 55% !important;
+    bottom: 0 !important
+}
+
+.player3quartet {
+    position: fixed !important;
+    left: 25% !important;
+    bottom: 0 !important
+}
+
+.player4quartet {
+    position: fixed !important;
+    left: 0% !important;
+    bottom: 25% !important
+    
+}

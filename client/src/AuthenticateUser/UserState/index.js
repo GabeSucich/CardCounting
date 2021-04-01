@@ -1,18 +1,21 @@
 import React, {useContext, createContext, useReducer} from "react"
 
-import {SET_USER} from "./action"
+import {SET_USER, SIGNAL_NEW_USER} from "./action"
 
 const UserContext = createContext()
 const {Provider} = UserContext
 
 const initial = {
-    user: false
+    user: false,
+    isNew: false
 }
 
 const reducer = (state, action) => {
     switch (action.type) {
         case SET_USER:
             return {...state, user: action.user}
+        case SIGNAL_NEW_USER:
+            return {...state, isNew: true}
     }
 }
 

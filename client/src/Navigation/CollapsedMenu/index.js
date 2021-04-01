@@ -53,11 +53,15 @@ export default function CollapsedMenu({ ...props }) {
                         />
                     </Menu.Menu>
                 </Menu.Item>
-                <Menu.Item className="collapsed-menu-item">
-                    <Menu.Header
-                        as={() => <Button fluid size="mini" primary onClick={newGame}>New Game Settings</Button>}
-                    />
-                </Menu.Item>
+                {gameState.game &&
+                    <Menu.Item className="collapsed-menu-item">
+                        <Menu.Header
+                            as={() => <Button fluid size="mini" primary onClick={newGame}>New Game Settings</Button>}
+                        />
+                    </Menu.Item>
+                }
+
+
             </Menu>
         </Portal>
 

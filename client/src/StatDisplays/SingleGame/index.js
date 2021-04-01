@@ -88,7 +88,7 @@ export default function PlayingStats({ gameInfo, restartGame, newGame, ...props 
 
                 <Header className="sunrise white" as="h1">Play Again</Header>
 
-                <Button animated="vertical" onClick={restartGame}>
+                <Button animated="vertical" onClick={restartGame} inverted color="black">
                     <Button.Content visible>
                         Same Game Settings
                     </Button.Content>
@@ -98,7 +98,7 @@ export default function PlayingStats({ gameInfo, restartGame, newGame, ...props 
                 </Button>
 
                 <Divider />
-                <Button animated="vertical" onClick = {newGame}>
+                <Button animated="vertical" onClick = {newGame} inverted color="black">
                     <Button.Content visible>New Game Settings</Button.Content>
                     <Button.Content hidden><Icon name = "random" /></Button.Content>
                 </Button>

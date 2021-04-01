@@ -2,18 +2,18 @@
 
 .player1triple {
     position: fixed !important;
-    left: 70% !important;
-    bottom: 0 !important
+    left: 65% !important;
+    bottom: 0% !important
 }
 
 .player2triple {
     position: fixed !important;
-    left: 35% !important;
+    left: 30% !important;
     bottom: 0 !important
 }
 
 .player3triple {
     position: fixed !important;
     left: 0% !important;
-    bottom: 0 !important
+    bottom: 25% !important
 }

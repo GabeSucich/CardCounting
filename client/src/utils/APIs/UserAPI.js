@@ -3,6 +3,15 @@ import Axios from "axios"
 
 const UserAPI = {
 
+    checkCurrenUser() {
+        return Axios({
+            method: "GET",
+            url: "/api/user/current"
+        }).then(response => {
+            return response.data
+        })
+    }, 
+
     findUsername(username) {
         return Axios({
             method: "POST",
@@ -34,11 +43,11 @@ const UserAPI = {
         })
     },
 
-    loginUser(username) {
+    loginUser(user) {
         return Axios({
             method: "POST",
             url: "/api/user/login",
-            data: {username: username, password: "unnecessary"}
+            data: {username: user.username, password: "unnecessary"}
         }).then(response => {
             return response.data
         })

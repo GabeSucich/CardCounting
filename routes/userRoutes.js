@@ -4,6 +4,10 @@ const _ = require("lodash")
 
 module.exports = function(app) {
 
+    app.get("/api/user/current", (req, res) => {
+        res.json(req.user)
+    })
+
     app.post("/api/user/login", passport.authenticate("local"), (req, res) => {
         res.json(req.user)
     })
