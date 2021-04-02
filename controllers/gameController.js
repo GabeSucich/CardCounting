@@ -3,7 +3,6 @@ const db = require("../models")
 const Game = {
 
     createGame(userId, data) {
-        console.log("creating Game")
         return db.Game.create({UserId: userId, ...data}).then(dbGame => {
             return dbGame
         })

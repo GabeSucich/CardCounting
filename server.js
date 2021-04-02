@@ -15,9 +15,6 @@ app.use(express.json())
 
 app.use(express.static(publicPath))
 
-console.log(publicPath)
-
-
 app.use(session({ secret: "True_count_is_4", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());

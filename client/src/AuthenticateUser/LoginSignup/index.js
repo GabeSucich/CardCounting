@@ -56,7 +56,7 @@ export default function LoginSignup({ ...props }) {
 
     const checkUsername = () => {
         return UserAPI.findUsername(username).then(dbUser => {
-        
+
             if (!dbUser) {
                 alertInvalidUsername()
                 return false;
@@ -71,22 +71,24 @@ export default function LoginSignup({ ...props }) {
         if (!user) {
             setLoadingCredentials(false)
             return;
-        } else if (UserAPI.checkPassword(password, user.password)) {
-            console.log("Password was correct")
-            UserAPI.loginUser(user).then(dbUser => {
-                userDispatch({ type: SET_USER, user: dbUser })
-            })
         } else {
-            console.log("password was incorrect")
-            setLoadingCredentials(false)
-            alertInvalidPassword()
+            (UserAPI.checkPassword(username, password)).then(validated => {
+                if (validated) {
+                    UserAPI.loginUser(user).then(dbUser => {
+                        userDispatch({ type: SET_USER, user: dbUser })
+                    })
+                } else {
+                    setLoadingCredentials(false)
+                    alertInvalidPassword()
+                }
+            })
         }
     }
 
     const attemptLogin = () => {
         setLoadingCredentials(true)
         checkUsername().then(validUser => {
-    
+
             if (!validUser) {
                 setLoadingCredentials(false)
                 alertInvalidUsername()

@@ -43,7 +43,6 @@ class Player {
     }
 
     makeProperDecision(hand, dealerHand, trueCount) {
-        // console.log(dealerHand)
         return this.DecisionMaker.properMove(hand, this.hands.length, dealerHand, trueCount)
     }
 

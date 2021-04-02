@@ -6,14 +6,10 @@ import "./style.css"
 
 export default function Loader({color, type, width, height, ...props}) {
 
-    
-
     var color = color || "#0E6EB8"
     var type = type || "bubbles"
     var width = width || 64
     var height = height || 64
-    
-    console.log(color)
 
     return (
         <div>

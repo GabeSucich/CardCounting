@@ -22,13 +22,13 @@ const UserAPI = {
         })
     },
 
-    checkPassword(passwordEntry, encryptedPassword) {
-        return bcrypt.compareSync(passwordEntry, encryptedPassword)
-    },
-
-    checkPasswordFromDatabase(username, password) {
-        this.findUsername(username).then(dbUser => {
-            return bcrypt.compareSync(password, dbUser.password)
+    checkPassword(username, passwordEntry) {
+        return Axios({
+            method: "POST",
+            data: {username: username, password: passwordEntry},
+            url: "/api/user/checkpassword"
+        }).then(response => {
+            return response.data
         })
     },
 

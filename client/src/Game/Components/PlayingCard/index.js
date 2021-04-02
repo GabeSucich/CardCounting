@@ -34,9 +34,6 @@ export default function Card({card, active, isFirst, isLast, ...props}) {
         return className
     }
 
-    console.log(getClass())
-
-
     return (
         
         <Image  src = {getSRC(card)} className = {getClass()}/>
