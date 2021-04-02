@@ -4,7 +4,7 @@ var session = require("express-session");
 var db = require("./models")
 var passport = require('./config/passport')
 
-var publicPath = path.join(__dirname, "client", "public")
+var publicPath = path.join(__dirname, "client", "build")
 
 var PORT = process.env.PORT || 5000;
 
@@ -14,6 +14,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use(express.static(publicPath))
+
+console.log(publicPath)
 
 
 app.use(session({ secret: "True_count_is_4", resave: true, saveUninitialized: true }));
