@@ -22,6 +22,8 @@ app.use(passport.session());
 
 require("./routes")(app)
 
+app.get('/*', (req, res) => res.send(publicPath));
+
 
 db.sequelize.sync({ force: false}).then(function () {
     app.listen(PORT, function () {

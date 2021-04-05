@@ -4,7 +4,7 @@ import ReactLoading from "react-loading"
 
 import "./style.css"
 
-export default function Loader({color, type, width, height, ...props}) {
+export default function Loader({ color, type, width, height, ...props }) {
 
     var color = color || "#0E6EB8"
     var type = type || "bubbles"
@@ -13,7 +13,7 @@ export default function Loader({color, type, width, height, ...props}) {
 
     return (
         <div>
-        <ReactLoading color = {color} type ={type} className = {"center " + props.className} {...props} width = {width} height = {height}/>
+            <ReactLoading color={color} type={type} className={"center " + props.className} {...props} width={width} height={height} />
         </div>
     )
 }
