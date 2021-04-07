@@ -23,7 +23,6 @@ app.use(passport.session());
 require("./routes")(app)
 
 app.get("*", function (req, res) {
-    console.log("Sending backup")
     res.sendFile(path.join(__dirname, "client/build/index.html"));
 })
 
