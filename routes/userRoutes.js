@@ -13,6 +13,11 @@ module.exports = function(app) {
         res.json(req.user)
     })
 
+    app.get("api/user/logout", (req, res) => {
+        req.logout()
+        res.status(200)
+    })
+
     app.post("/api/user/create", (req, res) => {
         const {username, password} = req.body
         User.createUser(username, password).then(newUser => {

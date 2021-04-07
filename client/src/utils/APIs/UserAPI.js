@@ -51,6 +51,15 @@ const UserAPI = {
         }).then(response => {
             return response.data
         })
+    },
+
+    logout() {
+        return Axios({
+            method: "GET",
+            url: "/api/user/logout"
+        }).then(response => {
+            return response
+        })
     }
 
 }

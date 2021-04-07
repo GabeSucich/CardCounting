@@ -4,9 +4,16 @@ import { Link, useLocation } from "react-router-dom"
 
 import { Segment, Menu, Dropdown } from "semantic-ui-react"
 
+import {useUserContext} from "../../AuthenticateUser/UserState"
+import {SET_USER} from "../../AuthenticateUser/UserState/action"
+
+import UserAPI from "../../utils/APIs/UserAPI"
+
 export default function Navigation({ ...props }) {
 
     const [activePage, setActivePage] = useState()
+
+    const [userState, userDispatch] = useUserContext()
     
     const loc = useLocation()
     
@@ -14,6 +21,12 @@ export default function Navigation({ ...props }) {
     useEffect(() => {
         setActivePage(loc.pathname.slice(1))
     }, [])
+
+    const logout = () => {
+        UserAPI.logout().then(_ => {
+            userDispatch({type: SET_USER})
+        })
+    }
 
 
     return (
@@ -49,6 +62,11 @@ export default function Navigation({ ...props }) {
                 onClick={() => setActivePage("train")}
             />
 
+            <Menu.Item 
+                onClick = {logout}
+                name = "Logout"
+                position = "right"
+            />
 
 
         </Menu>

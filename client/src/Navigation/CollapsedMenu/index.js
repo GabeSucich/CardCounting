@@ -6,10 +6,17 @@ import { Button, Divider, Icon, Menu, Portal } from "semantic-ui-react"
 import { useGameContext } from "../../Game/GlobalStates/GameState"
 import { GAME_RESET, CLEAR_GAME } from "../../Game/GlobalStates/GameState/action"
 
+import {useUserContext} from "../../AuthenticateUser/UserState"
+import {SET_USER} from "../../AuthenticateUser/UserState/action"
+
+import UserAPI from "../../utils/APIs/UserAPI"
+
 
 export default function CollapsedMenu({ ...props }) {
 
     const [gameState, gameDispatch] = useGameContext()
+    const [userState, userDispatch] = useUserContext()
+    
 
     const [visible, setVisible] = useState(false)
 
@@ -23,6 +30,11 @@ export default function CollapsedMenu({ ...props }) {
         setVisible(false)
     }
 
+    const logout = () => {
+        UserAPI.logout().then(_ => {
+            userDispatch({type: SET_USER})
+        })
+    }
 
 
     return (
@@ -60,6 +72,12 @@ export default function CollapsedMenu({ ...props }) {
                         />
                     </Menu.Item>
                 }
+                <Menu.Item className = "collapsed-menu-item">
+                    <Menu.Header 
+                        as = {() => <Button fluid size="mini" color = "red" onClick={logout}>Logout</Button>}
+                    />
+                </Menu.Item>
+                
 
 
             </Menu>
